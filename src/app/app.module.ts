@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { RecordService} from './record.service';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent} from './login/login.component';
 import { FormsModule} from '@angular/forms'
+// colocammos la estructura del routing. es decir
+//la estructura del sitio.  en imports -> RouterModule.forRoot
 
 @NgModule({
   declarations: [
@@ -24,12 +26,12 @@ import { FormsModule} from '@angular/forms'
     FormsModule,
     RouterModule.forRoot([
          {
-         	path: 'data',
-         	component: DataComponent
+         	path: 'login',
+         	component: LoginComponent
          },
          {
-         	path: '',
-         	component:HomeComponent
+         	path: 'data',
+         	component:DataComponent
          }
     	])
    
