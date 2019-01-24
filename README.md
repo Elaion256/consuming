@@ -8,16 +8,14 @@ la construccion fue de una estructura de ficheros a como sigue
 app-
    |
    |
-   
       |-Login
              |
-             |login.component.ts
-           
+             |login.component.ts    
    |
       |-Data
              |data.component.ts
    |
-       | Home
+      | Home
    |
    |
    |
