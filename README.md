@@ -42,4 +42,7 @@ en la consola del navegador, los ultimos intentos de obtener una respuesta del t
 a raiz de esto se intento acceder a la API rest mediante un entorno de pruebas como postman , para verficar si el problema esta por parte de los permisos del servior, a lo cual el resultado de postman dio positivo accediendo a el json que contiene el token.
 
 paralelamente , estuve intentando insertar por lo menos 2 plugins para el grid filtrable de la segunda etapa. ( a saber angular 
-ui-grid y 
+ui-grid y angular-data-grid) ambos siguiendo las instrucciones pero sin exito ya que tenian funciones deprecadas.
+
+
+los archivos estan todos comentados en sus respectivas funciones para una mayor comprension del problema.
