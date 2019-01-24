@@ -21,20 +21,14 @@ export class LoginComponent implements OnInit {
   onLogin(event) {
 
   event.preventDefault()
-
+ //coleccionamos las variabes de nuestro formulario 
    const target = event.target;
    const usrname = target.querySelector("#name").value;
    const pass   = target.querySelector("#pass").value;
-
+// las pasamos a nuestra funcion para pasar los parametros para 
+// postearlos a la URL que nos devolverá el token
    this.Auth.getUserToken(usrname , pass)
     
-
-  	/*
-      this.http.put("https://dev.tuten.cl:443/TutenREST/rest/user/testapis%40tuten.cl", 
-     {headers: {'Acept': 'Application/json', 'password': this.user.pass, 'app': this.user.app} })
-      .subscribe(data => { 
-      	console.log("y que obtenemos?", data)*/
-
  }
 
 }
