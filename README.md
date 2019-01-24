@@ -8,23 +8,23 @@ la construccion fue de una estructura de ficheros a como sigue
 app-
    |
    |
+    
       |-Login
              |
              |login.component.ts    
    |
+   
       |-Data
              |data.component.ts
    |
+   
       | Home
    |
-   |
-   |
-   app.module.ts
-   app.component.ts
-   auth.service
-   |
-   |
-   record.service
+   
+   | app.module.ts
+   | app.component.ts
+   | auth.service
+   | record.service
 
 en donde construi lo siguiente:
 
