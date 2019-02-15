@@ -26,7 +26,7 @@ import { FormsModule} from '@angular/forms'
     FormsModule,
     RouterModule.forRoot([
          {
-         	path: 'login',
+         	path: '',
          	component: LoginComponent
          },
          {
