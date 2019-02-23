@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserInterface } from '../models/UserInterface';
 import { AuthService } from '../auth.service';
+import { RouterModule } from '@angular/router';
+import { JsonHandler} from '../JsonHandler';
+
 
 @Component({
   selector: 'app-login',
@@ -10,25 +13,29 @@ import { AuthService } from '../auth.service';
 })
 
 export class LoginComponent implements OnInit {
+     
+   public token : JsonHandler;
+  constructor(private Auth : AuthService) {
 
-  constructor(private Auth : AuthService) { }
+  }
    
-
   ngOnInit() {
 
   }
 
   onLogin(event) {
 
-  event.preventDefault()
- //coleccionamos las variabes de nuestro formulario 
+  event.preventDefault();
+
    const target = event.target;
    const usrname = target.querySelector("#name").value;
    const pass   = target.querySelector("#pass").value;
-// las pasamos a nuestra funcion para pasar los parametros para 
-// postearlos a la URL que nos devolverá el token
-   this.Auth.getUserToken(usrname , pass)
-    
- }
+
+   this.Auth.getUserToken(usrname, pass).subscribe( data => {
+     this.token = data;
+     console.log(this.token);
+   });
+
+   };
 
 }
